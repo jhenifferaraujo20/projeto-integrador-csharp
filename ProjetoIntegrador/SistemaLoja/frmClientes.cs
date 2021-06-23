@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SistemaLoja
 {
@@ -43,7 +44,17 @@ namespace SistemaLoja
             arquivo = File.AppendText(caminho);
             arquivo.WriteLine(nome + " - " + cpf + " - " + telefone + " - " + cep + " - " + endereco + " - " + cidade + " - " + estado + " - " + email);
             arquivo.Close();
-            MessageBox.Show("Cliente salvo!");
+
+            string bancoDeDados = "server=localhost;user id=root;password=;database=loja_jadore";
+            MySqlConnection conexao = new MySqlConnection(bancoDeDados);
+            try
+            {
+                conexao.Open();
+            }
+            catch (MySqlException erro)
+            {
+                MessageBox.Show("Não foi possível conectar com o banco de dados: " + erro.Message);
+            }
         }
     }
 }
