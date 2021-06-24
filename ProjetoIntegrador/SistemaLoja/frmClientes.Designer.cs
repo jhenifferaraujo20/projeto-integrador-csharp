@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
@@ -45,6 +46,8 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.erroNome = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.erroNome)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +66,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(451, 20);
             this.txtNome.TabIndex = 1;
+            this.txtNome.Validating += new System.ComponentModel.CancelEventHandler(this.txtNome_Validating);
             // 
             // txtTelefone
             // 
@@ -194,6 +198,10 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // erroNome
+            // 
+            this.erroNome.ContainerControl = this;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +229,7 @@
             this.Name = "frmClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Cliente";
+            ((System.ComponentModel.ISupportInitialize)(this.erroNome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +254,7 @@
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.ErrorProvider erroNome;
     }
 }
 
