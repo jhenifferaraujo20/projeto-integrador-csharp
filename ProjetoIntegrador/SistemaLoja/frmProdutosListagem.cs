@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SistemaLoja
 {
-    public partial class frmAlterarCliente : Form
+    public partial class frmProdutosListagem : Form
     {
-        public frmAlterarCliente()
+        public frmProdutosListagem()
         {
             InitializeComponent();
+        }
+
+        private void btnNovoProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

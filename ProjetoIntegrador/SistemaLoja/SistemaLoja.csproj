@@ -60,6 +60,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -89,11 +90,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAlterarCliente.cs">
+    <Compile Include="frmClientesAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAlterarCliente.Designer.cs">
-      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
+    <Compile Include="frmClientesAlterar.Designer.cs">
+      <DependentUpon>frmClientesAlterar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmClientesListagem.cs">
       <SubType>Form</SubType>
@@ -101,11 +102,11 @@
     <Compile Include="frmClientesListagem.Designer.cs">
       <DependentUpon>frmClientesListagem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmClientes.cs">
+    <Compile Include="frmClientesCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmClientes.Designer.cs">
-      <DependentUpon>frmClientes.cs</DependentUpon>
+    <Compile Include="frmClientesCadastro.Designer.cs">
+      <DependentUpon>frmClientesCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -113,28 +114,28 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProdutos.cs">
+    <Compile Include="frmProdutosListagem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProdutos.Designer.cs">
-      <DependentUpon>frmProdutos.cs</DependentUpon>
+    <Compile Include="frmProdutosListagem.Designer.cs">
+      <DependentUpon>frmProdutosListagem.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAlterarCliente.resx">
-      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmClientesAlterar.resx">
+      <DependentUpon>frmClientesAlterar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmClientesListagem.resx">
       <DependentUpon>frmClientesListagem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmClientes.resx">
-      <DependentUpon>frmClientes.cs</DependentUpon>
+    <EmbeddedResource Include="frmClientesCadastro.resx">
+      <DependentUpon>frmClientesCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProdutos.resx">
-      <DependentUpon>frmProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="frmProdutosListagem.resx">
+      <DependentUpon>frmProdutosListagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

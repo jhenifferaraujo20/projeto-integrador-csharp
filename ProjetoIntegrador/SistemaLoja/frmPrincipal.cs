@@ -25,7 +25,13 @@ namespace SistemaLoja
 
         private void novoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmClientes formulario = new frmClientes();
+            frmClientesCadastro formulario = new frmClientesCadastro();
+            formulario.ShowDialog();
+        }
+
+        private void alterarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClientesAlterar formulario = new frmClientesAlterar();
             formulario.ShowDialog();
         }
     }

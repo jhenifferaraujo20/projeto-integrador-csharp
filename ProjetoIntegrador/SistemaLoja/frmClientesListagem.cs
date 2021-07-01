@@ -20,7 +20,7 @@ namespace SistemaLoja
 
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
-            frmClientes formulario = new frmClientes();
+            frmClientesCadastro formulario = new frmClientesCadastro();
             formulario.ShowDialog();
         }
 
@@ -28,7 +28,6 @@ namespace SistemaLoja
         {
             string bancoDeDados = "server=localhost;user id=root;password=;database=loja_jadore";
             MySqlConnection conexao = new MySqlConnection(bancoDeDados);
-
             try
             {
                 conexao.Open();
@@ -48,12 +47,11 @@ namespace SistemaLoja
         {
             string bancoDeDados = "server=localhost;user id=root;password=;database=loja_jadore";
             MySqlConnection conexao = new MySqlConnection(bancoDeDados);
-
             try
             {
                 string nomeBuscar = txtNomeBuscar.Text;
                 conexao.Open();
-                string sqlSelecionar = $"SELECT * FROM clientes WHERE nome LIKE '%{nomeBuscar}%'";
+                string sqlSelecionar = $"SELECT * FROM clientes WHERE nome_completo LIKE '%{nomeBuscar}%'";
                 MySqlDataAdapter da = new MySqlDataAdapter(sqlSelecionar, conexao);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -64,15 +62,6 @@ namespace SistemaLoja
             {
                 MessageBox.Show("A conexão falhou. Erro: " + erro.Message, "Erro na conexão");
             }
-        }
-
-        private void Pesquisar(string nome)
-        {
-            string sqlBuscar = "";
-            sqlBuscar = $"SELECT * FROM clientes WHERE nome LIKE '%{nome}%'";
-
-            string bancoDeDados = "server=localhost;user id=root;password=;database=loja_jadore";
-            MySqlConnection conexao = new MySqlConnection(bancoDeDados);
         }
     }
 }
