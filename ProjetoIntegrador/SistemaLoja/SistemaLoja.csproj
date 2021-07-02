@@ -114,6 +114,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProdutosCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutosCadastro.Designer.cs">
+      <DependentUpon>frmProdutosCadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProdutosListagem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdutosCadastro.resx">
+      <DependentUpon>frmProdutosCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutosListagem.resx">
       <DependentUpon>frmProdutosListagem.cs</DependentUpon>
@@ -159,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

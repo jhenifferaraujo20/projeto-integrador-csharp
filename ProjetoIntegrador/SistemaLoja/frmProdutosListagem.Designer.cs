@@ -96,6 +96,7 @@
             this.Name = "frmProdutosListagem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produtos";
+            this.Load += new System.EventHandler(this.frmProdutosListagem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

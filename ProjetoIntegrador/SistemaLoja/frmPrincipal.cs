@@ -34,5 +34,17 @@ namespace SistemaLoja
             frmClientesAlterar formulario = new frmClientesAlterar();
             formulario.ShowDialog();
         }
+
+        private void listarTodosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmProdutosListagem formulario = new frmProdutosListagem();
+            formulario.ShowDialog();
+        }
+
+        private void novoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProdutosCadastro formulario = new frmProdutosCadastro();
+            formulario.ShowDialog();
+        }
     }
 }
